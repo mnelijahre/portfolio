@@ -1,9 +1,74 @@
+/*
+https://icons8.com/icon/set/instagram/ios-filled
+*/
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --background-color: #070D0D;
+    --colorOne: white;
+}
+
 #landingPage{
     height: 100vh;
     width: 100vw;
+    background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+}
+
+#landingPageHeader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    background: rgb(0, 0, 0);
+    flex: 1 1 0;
+}
+#landingPageHeader h1{
+    color: var(--colorOne);
+    font-size: 3rem;
+}
+#pictureOfMeOne{
+    background: url(mebutfancyBg.png);
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    transition: transform 1s;
+}
+#wrapper:hover #pictureOfMeOne{
+    transform: rotateZ(360deg);
+}
+#wrapper{
+    border-radius: 100px;
+}
+
+#landingPageFooter{
+    background: white;
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#shareWrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+}
+
+#landingPageFooter a img{
+    width: 50px;
+    height: 50px;
+    transition: transform 0.5s;
+}
+
+#landingPageFooter a:hover img{
+    transform: scale(1.5);
 }
