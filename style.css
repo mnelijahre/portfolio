@@ -33,6 +33,9 @@ https://icons8.com/icon/set/instagram/ios-filled
     color: var(--colorOne);
     font-size: 3rem;
 }
+#landingPageHeader p{
+    color: white;
+}
 #pictureOfMeOne{
     background: url(mebutfancyBg.png);
     background-size: cover;
