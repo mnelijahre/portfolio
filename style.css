@@ -89,7 +89,7 @@ https://icons8.com/icon/set/instagram/ios-filled
     transform: translateY(100%);
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (max-width: 800px) {
     .socialLabel{
         transform: translateY(0);
     }
