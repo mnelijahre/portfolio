@@ -1,3 +1,7 @@
+//
+
+
+//Page list animation
 const projectPage = document.querySelector("#projectPage");
 const pageList = document.querySelector("#pageList");
 
@@ -8,7 +12,6 @@ const exit = document.querySelector("#x");
 function toggleDisplay(){
     projectPage.classList.toggle("hidden");
     pageList.classList.toggle("hidden");
-
 }
 
 exit.addEventListener("click", ()=>{

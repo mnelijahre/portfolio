@@ -12,8 +12,7 @@ https://icons8.com/icon/set/instagram/ios-filled
     --colorOne: white;
 }
 
-#landingPage{
-    height: 100vh;
+#landingPage{    height: 100vh;
     width: 100vw;
     background: var(--background-color);
     display: flex;
@@ -54,7 +53,7 @@ https://icons8.com/icon/set/instagram/ios-filled
     transition: transform 1s;
 }
 #wrapper:hover #pictureOfMeOne{
-    transform: rotateZ(360deg);
+    transform: translateX(100%) rotateZ(360deg);
 }
 #wrapper{
     border-radius: 100px;
@@ -73,6 +72,31 @@ https://icons8.com/icon/set/instagram/ios-filled
     display: flex;
     flex-direction: row;
     gap: 5vw;
+}
+.socialButtonWrapper{
+    text-decoration: none;
+    position: relative;
+
+}
+.hideOverflow{
+
+    overflow: hidden;
+}
+.socialLabel{
+    color: rgb(0, 0, 0);
+    transition: transform 1s;
+    padding-bottom: 2vh;
+    transform: translateY(100%);
+}
+
+@media screen and (min-width: 800px) {
+    .socialLabel{
+        transform: translateY(0);
+    }
+}
+
+.socialButtonWrapper:hover .socialLabel{
+    transform: translateY(0);
 }
 
 #landingPageFooter a img{
