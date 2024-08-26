@@ -133,13 +133,6 @@ https://icons8.com/icon/set/instagram/ios-filled
     transform: translateY(100%) translateX(-50%);
 }
 
-@media screen and (max-width: 800px) {
-    .socialLabel{
-        transform: translateY(0);
-    }
-}
-
-
 
 #landingPageFooter a img{
     width: 50px;
@@ -243,25 +236,31 @@ https://icons8.com/icon/set/instagram/ios-filled
 }
 
 @media  screen and (max-width: 800px) {
+    
+    .socialLabel{
+        transform: translateY(0);
+    }
     @keyframes rollAround {
         0%{
-            transform: translateX(0) rotateY(0deg);
-            opacity: 1;
+            transform: translateX(0);
         }
         48%{
-            transform: translateX(100vw) rotateZ(360deg);
+            transform: translateX(100vw);
             opacity: 1;
         }
         49%{
             opacity: 0;
-            transform: translateX(-100vw) rotateZ(-360deg);
+            transform: translateX(-100vw);
         }
         50%{
             opacity: 1;
         }
         100%{
-            transform: translateX(0) rotateZ(0deg);
+            transform: translateX(0);
         }
+    }
+    #landingPageFooter{
+        background: red;
     }
     .pageList{
         width: 90vw;
