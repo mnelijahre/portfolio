@@ -3,8 +3,8 @@ const pictureOfMeWrapper = document.querySelector("#wrapper");
 const me = document.querySelector("#pictureOfMeOne");
 
 me.addEventListener("click", ()=>{
-    me.classList.add("rollAround");
     me.classList.remove("pictureOfMe");
+    me.classList.add("rollAround");
     setTimeout(function() {
         me.classList.remove("meOne");
         me.classList.add("meToo")

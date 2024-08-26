@@ -202,6 +202,12 @@ https://icons8.com/icon/set/instagram/ios-filled
 
 
 }
+@media screen and (max-width: 800px) {
+    .projectPage{
+        transition: height 0.1s;
+
+    }
+}
 
 
 .pageList{
