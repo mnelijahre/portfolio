@@ -246,9 +246,11 @@ https://icons8.com/icon/set/instagram/ios-filled
     @keyframes rollAround {
         0%{
             transform: translateX(0) rotateY(0deg);
+            opacity: 1;
         }
         48%{
             transform: translateX(100vw) rotateZ(360deg);
+            opacity: 1;
         }
         49%{
             opacity: 0;
