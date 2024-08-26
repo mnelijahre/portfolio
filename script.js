@@ -11,7 +11,7 @@ me.addEventListener("click", ()=>{
     }, 500);
 })
 
-me.addEventListener("touchend", ()=>{
+me.addEventListener("", ()=>{
     me.classList.add("rollAround");
     me.classList.remove("pictureOfMe");
     setTimeout(function() {
