@@ -118,14 +118,14 @@ https://icons8.com/icon/set/instagram/ios-filled
     text-align: center;
 }
 @media (any-pointer: fine){
-    @media not(any-pointer: coarse){
+    
         .socialButtonWrapper:hover .hideOverflow{
             width: 100%;
         }
         .socialButtonWrapper:hover .socialLabel{
             transform: translateY(-20%) translateX(-50%);
         }
-    }
+    
 }
 @media not (any-pointer: fine){
     @media (any-pointer: coarse){
