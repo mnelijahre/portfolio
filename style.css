@@ -113,6 +113,7 @@ https://icons8.com/icon/set/instagram/ios-filled
     overflow: hidden;
     width: 0;
     height: 2vh;
+    padding-bottom: 2vh;
     border-bottom: 2px solid black;
     transition: width 1s;
     text-align: center;
@@ -120,7 +121,7 @@ https://icons8.com/icon/set/instagram/ios-filled
 @media (any-pointer: fine){
     
         .socialButtonWrapper:hover .hideOverflow{
-            width: 100%;
+            width: 5rem;
         }
         .socialButtonWrapper:hover .socialLabel{
             transform: translateY(-20%) translateX(-50%);
@@ -144,6 +145,7 @@ https://icons8.com/icon/set/instagram/ios-filled
     color: rgb(0, 0, 0);
     transition: transform 1s;
     transform: translateY(100%) translateX(-50%);
+    overflow: visible;
 }
 
 
