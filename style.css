@@ -50,11 +50,7 @@ https://icons8.com/icon/set/instagram/ios-filled
     transition: transform 1s;
 }
 
-@media screen and (min-width: 800px) {
-    #wrapper:hover .pictureOfMe{
-        transform: translateX(100%) rotateZ(360deg);
-    }
-}
+
 
 
 .meOne{
@@ -84,25 +80,7 @@ https://icons8.com/icon/set/instagram/ios-filled
     animation: rollAround 2s;
 }
 
-@keyframes rollAround {
-    0%{
-        transform: translateX(100%) rotateY(0deg);
-    }
-    48%{
-        transform: translateX(100vw) rotateZ(360deg);
-    }
-    49%{
-        opacity: 0;
-        transform: translateX(-100vw) rotateZ(-360deg);
-    }
-    50%{
-        opacity: 1;
-    }
-    100%{
-        transform: translateX(0) rotateZ(0deg);
-    }
-    
-}
+
 
 #landingPageFooter{
     background: white;
@@ -192,7 +170,6 @@ https://icons8.com/icon/set/instagram/ios-filled
     width: 110vw;
     height: 110dvh;
 
-
     background: url(mebutfancyBg.png);
     background-position: center;
     background-size: cover;
@@ -202,23 +179,16 @@ https://icons8.com/icon/set/instagram/ios-filled
 
 
 }
-@media screen and (max-width: 800px) {
-    .projectPage{
-        transition: height 0.1s;
 
-    }
-}
 
 
 .pageList{
 
     position: absolute;
     transition: height 1s, padding 1s;
-
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-
     width: 50vh;
     height: 50dvh;
     background: black;
@@ -246,10 +216,66 @@ https://icons8.com/icon/set/instagram/ios-filled
     box-shadow: none;
 }
 
+
+@media screen and (min-width: 800px) {
+    @keyframes rollAround {
+        0%{
+            transform: translateX(100%) rotateY(0deg);
+        }
+        48%{
+            transform: translateX(100vw) rotateZ(360deg);
+        }
+        49%{
+            opacity: 0;
+            transform: translateX(-100vw) rotateZ(-360deg);
+        }
+        50%{
+            opacity: 1;
+        }
+        100%{
+            transform: translateX(0) rotateZ(0deg);
+        }
+        
+    }
+    #wrapper:hover .pictureOfMe{
+        transform: translateX(100%) rotateZ(360deg);
+    }
+}
+
 @media  screen and (max-width: 800px) {
+    @keyframes rollAround {
+        0%{
+            transform: translateX(0) rotateY(0deg);
+        }
+        48%{
+            transform: translateX(100vw) rotateZ(360deg);
+        }
+        49%{
+            opacity: 0;
+            transform: translateX(-100vw) rotateZ(-360deg);
+        }
+        50%{
+            opacity: 1;
+        }
+        100%{
+            transform: translateX(0) rotateZ(0deg);
+        }
+    }
     .pageList{
         width: 90vw;
     }
+    .projectPage{
+        transition: opacity 1s;
+        opacity: 1;
+    }
+    .pageList{
+        transition: opacity 1s;
+        opacity: 1;
+    }
+    .hidden{
+        opacity: 0;
+    }
+
 }
 
 .hidden{
