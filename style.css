@@ -50,9 +50,12 @@ https://icons8.com/icon/set/instagram/ios-filled
     transition: transform 1s;
 }
 
-#wrapper:hover .pictureOfMe{
-    transform: translateX(100%) rotateZ(360deg);
+@media screen and (min-width: 800px) {
+    #wrapper:hover .pictureOfMe{
+        transform: translateX(100%) rotateZ(360deg);
+    }
 }
+
 
 .meOne{
     background: url("mebutfancyBg.png");
