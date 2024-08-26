@@ -12,7 +12,7 @@ https://icons8.com/icon/set/instagram/ios-filled
     --colorOne: white;
 }
 
-#landingPage{    height: 100vh;
+#landingPage{    height: 100dvh;
     width: 100vw;
     background: var(--background-color);
     display: flex;
@@ -103,7 +103,7 @@ https://icons8.com/icon/set/instagram/ios-filled
 
 #landingPageFooter{
     background: white;
-    height: 50vh;
+    height: 50dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -184,10 +184,10 @@ https://icons8.com/icon/set/instagram/ios-filled
     position: absolute;
     transition: height 1s;
     left: -5vw;
-    top: 55vh;
+    top: 55dvh;
 
     width: 110vw;
-    height: 110vh;
+    height: 110dvh;
 
 
     background: url(mebutfancyBg.png);
@@ -211,7 +211,7 @@ https://icons8.com/icon/set/instagram/ios-filled
     transform: translate(-50%, -50%);
 
     width: 50vh;
-    height: 50vh;
+    height: 50dvh;
     background: black;
     display: flex;
     flex-direction: column;
