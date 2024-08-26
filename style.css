@@ -117,12 +117,25 @@ https://icons8.com/icon/set/instagram/ios-filled
     transition: width 1s;
     text-align: center;
 }
-.socialButtonWrapper:hover .hideOverflow{
-    width: 100%;
+@media (any-pointer: fine){
+    @media not(any-pointer: coarse){
+        .socialButtonWrapper:hover .hideOverflow{
+            width: 100%;
+        }
+        .socialButtonWrapper:hover .socialLabel{
+            transform: translateY(-20%) translateX(-50%);
+        }
+    }
 }
-.socialButtonWrapper:hover .socialLabel{
-    
-    transform: translateY(-20%) translateX(-50%);
+@media not (any-pointer: fine){
+    @media (any-pointer: coarse){
+        .socialButtonWrapper .hideOverflow{
+            width: 100%;
+        }
+        .socialButtonWrapper .socialLabel{
+            transform: translateY(-20%) translateX(-50%);
+        }
+    }
 }
 .socialLabel{
     position: absolute;
@@ -210,32 +223,8 @@ https://icons8.com/icon/set/instagram/ios-filled
 }
 
 
-@media screen and (min-width: 800px) {
-    @keyframes rollAround {
-        0%{
-            transform: translateX(100%) rotateY(0deg);
-        }
-        48%{
-            transform: translateX(100vw) rotateZ(360deg);
-        }
-        49%{
-            opacity: 0;
-            transform: translateX(-100vw) rotateZ(-360deg);
-        }
-        50%{
-            opacity: 1;
-        }
-        100%{
-            transform: translateX(0) rotateZ(0deg);
-        }
-        
-    }
-    #wrapper:hover .pictureOfMe{
-        transform: translateX(100%) rotateZ(360deg);
-    }
-}
 
-@media  screen and (any-pointer: coarse) {
+@media (any-pointer: coarse ) {
     
     .socialLabel{
         transform: translateY(0);
@@ -259,9 +248,6 @@ https://icons8.com/icon/set/instagram/ios-filled
             transform: translateX(0);
         }
     }
-    #landingPageFooter{
-        background: red;
-    }
     .pageList{
         width: 90vw;
     }
@@ -279,6 +265,32 @@ https://icons8.com/icon/set/instagram/ios-filled
 
 }
 
+
+
+@media (any-pointer: fine) {
+    @keyframes rollAround {
+        0%{
+            transform: translateX(100%) rotateY(0deg);
+        }
+        48%{
+            transform: translateX(100vw) rotateZ(360deg);
+        }
+        49%{
+            opacity: 0;
+            transform: translateX(-100vw) rotateZ(-360deg);
+        }
+        50%{
+            opacity: 1;
+        }
+        100%{
+            transform: translateX(0) rotateZ(0deg);
+        }
+        
+    }
+    #wrapper:hover .pictureOfMe{
+        transform: translateX(100%) rotateZ(360deg);
+    }
+}
 .hidden{
     height: 0;
     padding: 0;
