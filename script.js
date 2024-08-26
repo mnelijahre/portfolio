@@ -1,5 +1,24 @@
 //
+const pictureOfMeWrapper = document.querySelector("#wrapper");
+const me = document.querySelector("#pictureOfMeOne");
 
+me.addEventListener("click", ()=>{
+    me.classList.add("rollAround");
+    me.classList.remove("pictureOfMe");
+    setTimeout(function() {
+        me.classList.remove("meOne");
+        me.classList.add("meToo")
+    }, 500);
+})
+
+me.addEventListener("touchend", ()=>{
+    me.classList.add("rollAround");
+    me.classList.remove("pictureOfMe");
+    setTimeout(function() {
+        me.classList.remove("meOne");
+        me.classList.add("meToo")
+    }, 500);
+})
 
 //Page list animation
 const projectPage = document.querySelector("#projectPage");

@@ -18,6 +18,7 @@ https://icons8.com/icon/set/instagram/ios-filled
     display: flex;
     flex-direction: column;
     position: relative;
+    overflow: hidden;
 }
 
 #landingPageHeader{
@@ -28,6 +29,7 @@ https://icons8.com/icon/set/instagram/ios-filled
     padding: 10px;
     background: rgb(0, 0, 0);
     flex: 1 1 0;
+    overflow: hidden;
 
 }
 #landingPageHeader h1{
@@ -45,18 +47,58 @@ https://icons8.com/icon/set/instagram/ios-filled
     color: rgb(0, 191, 255);
 }
 #pictureOfMeOne{
-    background: url(mebutfancyBg.png);
+    transition: transform 1s;
+}
+
+#wrapper:hover .pictureOfMe{
+    transform: translateX(100%) rotateZ(360deg);
+}
+
+.meOne{
+    background: url("mebutfancyBg.png");
     background-size: cover;
     width: 200px;
     height: 200px;
     border-radius: 100px;
-    transition: transform 1s;
+    
 }
-#wrapper:hover #pictureOfMeOne{
-    transform: translateX(100%) rotateZ(360deg);
+.meToo{
+    background: url("meWithGlasses.png");
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+.pictureOfMe{
+
+    cursor: pointer;
+
 }
 #wrapper{
     border-radius: 100px;
+}
+.rollAround{
+    animation: rollAround 2s;
+}
+
+@keyframes rollAround {
+    0%{
+        transform: translateX(100%) rotateY(0deg);
+    }
+    48%{
+        transform: translateX(100vw) rotateZ(360deg);
+    }
+    49%{
+        opacity: 0;
+        transform: translateX(-100vw) rotateZ(-360deg);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(0) rotateZ(0deg);
+    }
+    
 }
 
 #landingPageFooter{
@@ -71,22 +113,43 @@ https://icons8.com/icon/set/instagram/ios-filled
 #shareWrapper{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    width: 80vw;
     gap: 5vw;
 }
 .socialButtonWrapper{
     text-decoration: none;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 5vw;
 
 }
 .hideOverflow{
-
+    transform: translateY(-100%);
     overflow: hidden;
+    width: 0;
+    height: 2vh;
+    border-bottom: 2px solid black;
+    transition: width 1s;
+    text-align: center;
+}
+.socialButtonWrapper:hover .hideOverflow{
+    width: 100%;
+}
+.socialButtonWrapper:hover .socialLabel{
+    
+    transform: translateY(-20%) translateX(-50%);
 }
 .socialLabel{
+    position: absolute;
+    top: 0;
+    left: 50%;
     color: rgb(0, 0, 0);
     transition: transform 1s;
-    padding-bottom: 2vh;
-    transform: translateY(100%);
+    transform: translateY(100%) translateX(-50%);
 }
 
 @media screen and (max-width: 800px) {
@@ -95,9 +158,7 @@ https://icons8.com/icon/set/instagram/ios-filled
     }
 }
 
-.socialButtonWrapper:hover .socialLabel{
-    transform: translateY(0);
-}
+
 
 #landingPageFooter a img{
     width: 50px;
@@ -122,12 +183,11 @@ https://icons8.com/icon/set/instagram/ios-filled
 .projectPage{
     position: absolute;
     transition: height 1s;
+    left: -5vw;
+    top: 55vh;
 
-    left: 0;
-    top: 50vh;
-
-    width: 100vw;
-    height: 100vh;
+    width: 110vw;
+    height: 110vh;
 
 
     background: url(mebutfancyBg.png);
@@ -150,7 +210,7 @@ https://icons8.com/icon/set/instagram/ios-filled
     top: 50%;
     transform: translate(-50%, -50%);
 
-    width: 30vh;
+    width: 50vh;
     height: 50vh;
     background: black;
     display: flex;
@@ -170,9 +230,23 @@ https://icons8.com/icon/set/instagram/ios-filled
     text-decoration: none;
     width: 90%;
     text-align: center;
+    box-shadow: 4px 4px  gray;
+}
+.pageList a:active{
+    transform: translate(4px, 4px);
+    box-shadow: none;
+}
+
+@media  screen and (max-width: 800px) {
+    .pageList{
+        width: 90vw;
+    }
 }
 
 .hidden{
     height: 0;
     padding: 0;
 }
+
+
+
