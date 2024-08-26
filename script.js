@@ -11,14 +11,7 @@ me.addEventListener("click", ()=>{
     }, 500);
 })
 
-me.addEventListener("", ()=>{
-    me.classList.add("rollAround");
-    me.classList.remove("pictureOfMe");
-    setTimeout(function() {
-        me.classList.remove("meOne");
-        me.classList.add("meToo")
-    }, 500);
-})
+
 
 //Page list animation
 const projectPage = document.querySelector("#projectPage");
