@@ -97,6 +97,7 @@ https://icons8.com/icon/set/instagram/ios-filled
     justify-content: center;
     width: 80vw;
     gap: 5vw;
+    background: red;
 }
 @media screen and (max-width: 600px) {
     #shareWrapper{
