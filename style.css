@@ -110,7 +110,7 @@ https://icons8.com/icon/set/instagram/ios-filled
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 5vw;
+    flex-grow: 1;
 
 }
 .hideOverflow{
@@ -133,16 +133,16 @@ https://icons8.com/icon/set/instagram/ios-filled
         }
     
 }
-@media not (any-pointer: fine){
-    @media (any-pointer: coarse){
+/*@media not (any-pointer: fine){
+    @media (any-pointer: coarse){*/
         .socialButtonWrapper .hideOverflow{
             width: 100%;
         }
         .socialButtonWrapper .socialLabel{
             transform: translateY(-20%) translateX(-50%);
         }
-    }
-}
+    /*}
+}*/
 .socialLabel{
     position: absolute;
     top: 0;
