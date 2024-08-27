@@ -98,6 +98,11 @@ https://icons8.com/icon/set/instagram/ios-filled
     width: 80vw;
     gap: 5vw;
 }
+@media screen and (max-width: 600px) {
+    #shareWrapper{
+        justify-content: space-between;
+    }
+}
 .socialButtonWrapper{
     text-decoration: none;
     position: relative;
